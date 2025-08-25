@@ -3,10 +3,12 @@ Write a user-defined function is Even($n) that returns true if a number is even.
 -->
 <?php
 
-function Even($n) {
+function Even($n): bool
+{
     if ($n % 2 == 0) {
         return true;
     }
+    return false;
 }
 
 for ($i = 0; $i < 10; $i++) {
