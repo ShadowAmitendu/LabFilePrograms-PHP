@@ -5,19 +5,16 @@
  • <50: Fail
  -->
 <?php
+// Marks input
+$marks = 95;
 
-$grade = 95;
-
-switch ($grade) {
-    case 90:
-        echo "A";
-        break;
-    case 75:
-        echo "B";
-        break;
-    case 50:
-        echo "C";
-        break;
-    default:
-        echo "Fail";
+// Determine grade using if-else
+if ($marks >= 90) {
+    echo "Grade: A";
+} elseif ($marks >= 75) {
+    echo "Grade: B";
+} elseif ($marks >= 50) {
+    echo "Grade: C";
+} else {
+    echo "Grade: Fail";
 }
