@@ -3,8 +3,8 @@ Write a PHP script to display the multiplication table of a given number using a
 -->
 <?php
 
-$tableOf = 5;
+$tableOf = 7;
 
-for ($i = 0; $i < $tableOf; $i++) {
-    echo "$i x 5 = " . $i * $tableOf . "<br>";
+for ($i = 1; $i <= 10; $i++) {
+    echo "$i x $tableOf = " . $i * $tableOf . "<br>";
 }

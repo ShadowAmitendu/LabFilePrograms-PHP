@@ -3,12 +3,12 @@
 -->
 <?php
 
-$number = 3;
+$number = 15;
 
 if ($number % 3 == 0 and $number % 5 == 0) {
     echo "The number is divisible by both 3 and 5. <br>";
 } elseif ($number % 3 == 0) {
-    echo "The number is divisible by both 3. <br>";
+    echo "The number is divisible by 3. <br>";
 } else {
-    echo "The number is divisible by both 5. <br>";
+    echo "The number is divisible by 5. <br>";
 }
