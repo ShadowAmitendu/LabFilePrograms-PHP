@@ -5,13 +5,15 @@ Create a PHP script that defines a function inside another function
 -->
 <?php
 
-function outer() {
-    function inner() {
+function outer(): void
+{
+    function inner(): string
+    {
         return "from inner function";
     }
 
     echo "from outer function<br>";
-    echo "<b>inner function calling return: </b>".inner();
+    echo "<b>inner function calling return: </b>" . inner();
 }
 
 outer();

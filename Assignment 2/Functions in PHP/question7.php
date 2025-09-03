@@ -3,11 +3,10 @@ Write a function calculateArea($radius) to calculate the area of a circle. Call 
 -->
 <?php
 
-
-$radius = 5;
-
-function calculateArea($radius) {
+function calculateArea($radius): float //<-- this is return type
+{
     return 3.14 * $radius * $radius;
 }
 
-echo calculateArea($radius);
+echo calculateArea(5) . "<br>";
+echo calculateArea(45);

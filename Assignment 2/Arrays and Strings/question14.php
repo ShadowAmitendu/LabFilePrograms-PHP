@@ -10,4 +10,5 @@ for ($i = $len - 1; $i >= 0; $i--) {
 
 echo "Original String: " . $str . "<br>";
 echo "Reversed String: " . $reversed;
+
 ?>

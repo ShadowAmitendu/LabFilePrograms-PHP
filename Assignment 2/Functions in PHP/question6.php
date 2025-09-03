@@ -1,5 +1,5 @@
 <!--
-Write a user-defined function is Even($n) that returns true if a number is even. Call it inside a loop for numbers 1–10.
+Write a user-defined function isEven($n) that returns true if a number is even. Call it inside a loop for numbers 1–10.
 -->
 <?php
 
