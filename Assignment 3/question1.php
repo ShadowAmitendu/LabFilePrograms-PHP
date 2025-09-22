@@ -1,25 +1,17 @@
 <?php
-// Q1: Create Database, Table, and Insert Sample Records using Exception Handling
+// Q1: Create Table and Insert Sample Records using Exception Handling
 
 $host = "localhost";   // Change if needed
 $user = "root";        // Change if needed
 $pass = "";            // Change if needed
+$dbname = "lab_db";    // Existing database
 
 try {
-    // Step 1: Connect to MySQL server (no database selected yet)
-    $conn = new PDO("mysql:host=$host", $user, $pass);
+    // Step 1: Connect to lab_db
+    $conn = new PDO("mysql:host=$host;dbname=$dbname", $user, $pass);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
-    // Step 2: Create Database
-    $sql = "CREATE DATABASE IF NOT EXISTS lab_db";
-    $conn->exec($sql);
-    echo "Database created successfully.<br>";
-
-    // Step 3: Connect to lab_db
-    $conn = new PDO("mysql:host=$host;dbname=lab_db", $user, $pass);
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-    // Step 4: Create students table
+    // Step 2: Create students table
     $sql = "CREATE TABLE IF NOT EXISTS students (
                 id INT AUTO_INCREMENT PRIMARY KEY,
                 name VARCHAR(50) NOT NULL,
@@ -28,7 +20,7 @@ try {
     $conn->exec($sql);
     echo "Table 'students' created successfully.<br>";
 
-    // Step 5: Insert 3 sample records
+    // Step 3: Insert 3 sample records
     $sql = "INSERT INTO students (name, email) VALUES
                 ('Alice', 'alice@example.com'),
                 ('Bob', 'bob@example.com'),
